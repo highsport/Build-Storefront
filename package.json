@@ -1,0 +1,27 @@
+{
+  "name": "build-storefront",
+  "version": "1.0.0",
+  "description": "store for purching laptop products",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/highsport/Build-Storefront.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/highsport/Build-Storefront/issues"
+  },
+  "homepage": "https://github.com/highsport/Build-Storefront#readme",
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  }
+}
