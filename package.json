@@ -4,14 +4,17 @@
   "description": "store for purching laptop products",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js",
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js" 
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/highsport/Build-Storefront.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sayed Abd-Ellah",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/highsport/Build-Storefront/issues"
