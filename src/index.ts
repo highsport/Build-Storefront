@@ -1,12 +1,13 @@
-import express, { Request, Response } from 'express'
+import express, { Request, response, Response } from 'express'
 import morgan from 'morgan'
 import helmet from "helmet";
 import * as dotenv from 'dotenv'
 import rateLimit from 'express-rate-limit'
+import config from './database/config'
 
 dotenv.config()
 
-const PORT = process.env.PORT || 3000
+const PORT = config.port || 3000
 // create an instance server
 const app = express();
 // limit handeller
@@ -23,6 +24,11 @@ app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(limiter);
+app.use((req : Request, res : Response) => {
+  res.status(404).json({
+    message : 'try again later'
+  });
+});
 // start express server
 app.listen(PORT, () => {
   console.log(`Server is starting at prot:${PORT}`)
