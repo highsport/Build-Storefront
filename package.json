@@ -6,11 +6,11 @@
   "scripts": {
     "test": "npx tsc && jasmine",
     "dev": "nodemon ./src/index.ts",
-    "build": "yarn clean && npx tsc",
+    "build": "tsc",
     "start": "npm run build && nodemon build/index.js",
     "clean": "rimraf build/",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint src/**/*.ts"
   },
   "repository": {
     "type": "git",
